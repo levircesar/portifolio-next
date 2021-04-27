@@ -1,0 +1,21 @@
+.wrapper{
+  display: flex;
+  main{
+    flex: 1;
+    overflow-x: auto;
+    height: 100vh;
+
+    ul{
+      list-style-type: none;
+    }
+  }
+
+  .gits{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1010px){
+  
+}

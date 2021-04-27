@@ -1,0 +1,28 @@
+.container{
+  background:#E5E5E5;
+  border-right: 2px solid #cacaca;
+  height: 60px;
+  width: 100%;
+  margin-bottom: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+
+  .boxImg{
+    text-align: center;
+
+    h2{
+      margin-top: 1rem;
+    }
+    img{
+      width: 100%;
+      max-width: 200px;
+      border-radius: 50%;
+    }
+  }
+
+
+}

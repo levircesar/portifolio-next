@@ -1,0 +1,91 @@
+.banner{
+  display:block;
+  margin: 0 auto;
+  height: 100vh;
+  background-image: url('/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.overlay{
+  width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgba(20,20,20,0.4);
+}
+
+.index{
+  position: absolute;
+	z-index: 2;
+  color: white;
+}
+
+.call{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+
+  height: 200px;
+  h2{
+    position: relative;
+    z-index: 1;
+    color: white;
+  }
+  
+}
+.container{
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+  padding: 2rem;
+
+  
+
+  .logo{
+    justify-content: start;
+    position: relative;
+    z-index: 1;
+    h2{
+      color: white;
+      font-weight:bold;
+      font-size: 2rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .desktop{
+    margin-left: auto;
+
+    ul{
+      list-style-type: none;
+      position: relative;
+      z-index: 1;
+
+      li{
+        display: inline-block;
+        margin: 0 15px;
+        cursor: pointer;
+        
+        color: white;
+        font-weight:lighter;
+        font-size: 1.5rem;
+        text-decoration: none;
+
+        &:hover{
+          text-decoration: underline;
+        }
+        
+      }
+    }
+  }
+
+}
