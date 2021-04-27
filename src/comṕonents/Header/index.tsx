@@ -2,8 +2,6 @@ import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR';
 import styles from './styles.module.scss';
 import Link from 'next/link';
-import Drawer from 'react-motion-drawer';
-
 
 export default function Header({children}){
   const currentDate = format(new Date(), 'EEEEEE , d MMMM' ,{
