@@ -38,10 +38,12 @@ export default function Sidebar(){
           <a href="https://wa.me/5585998413146"><FaWhatsapp/></a>
       </div>
 
-        
-      <Link href="/"><button>Home</button></Link>
-      <Link href="/panel"><button>Painel</button></Link>
-      <Link href="/404"><button>Error</button></Link>
+      <div>
+        <Link href="/"><button>Home</button></Link>
+        <Link href="/panel"><button>Painel</button></Link>
+        <Link href="/404"><button>Error</button></Link>
+      </div>
+      
       
     </div>
     

@@ -74,7 +74,7 @@
 @media (max-width: 798px){
   .container{
     border-right: 0;
-    height: 100px;
+    height: 80px;
     width: 100%;
     max-width: 100%;
     flex-direction: row;
@@ -86,7 +86,10 @@
         padding: 0;
         cursor: pointer;
         margin-top: 0rem;
-        transition: 0.5s;
+        transition: 0.5s; 
+      }
+      p{
+        display: none;
       }
       img{
        display: none;
@@ -102,6 +105,20 @@
       a{
         font-size:1.2rem;
         margin: 0.1rem;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 465px){
+  .boxImg{
+    h2{
+      span{
+        display: none;
+      }
+      &:hover{
+        color: purple;
       }
     }
   }
