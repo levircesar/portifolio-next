@@ -35,7 +35,7 @@ export default function Home({repos} : HomeProps) {
               <p>{reposNumber} projetos públicos no Github</p>
               <p>site em construção</p>
               
-              <Link href="/panel">
+              <Link href="/profile">
                 <button><FaForward/></button>
               </Link>
 
