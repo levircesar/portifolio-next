@@ -1,11 +1,16 @@
-import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import React from 'react';
-import scroll from 'react-scroll'
 import Sidebar from '../comṕonents/Sidebar';
 import styles from '../styles/profile.module.scss';
+import format from 'date-fns/format';
+import ptBR from 'date-fns/locale/pt-BR';
 
 export default function Profile(){
+
+  const currentDate = format(new Date(), 'EEEEEE , d MMMM Y' ,{
+    locale: ptBR,
+  });
+
   return (
         <div className={styles.wrapper}>
         <Head>
@@ -24,16 +29,24 @@ export default function Profile(){
           
           <div className={styles.content}>
             <section>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Optio temporibus eum omnis officia ut inventore necessitatibus 
-                  distinctio error maxime dicta iusto natus minima repellat, ipsum,
-                  a itaque eaque iste doloremque?
+              <h2>
+              Seja muito bem vindo(a)! Fiz esse site usando meus conhecimentos em HTML, CSS, Javascript. 
+              Sinta-se avontade para navegar xD 
+              </h2>
+              <p>Esse pequeno site conta com a tecnologia recente do NextJS e outras funcionalidades do Node JS</p>
+              <p>Graduando em Engenharia de Computação na Universidade 
+                Federal do Ceara (UFC) . A paixão por tecnologia me levou a ingressar em 2017 na faculdade , 
+                onde aprendi muito com pessoas altamente capacitadas.
                 </p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                  Optio temporibus eum omnis officia ut inventore necessitatibus 
-                  distinctio error maxime dicta iusto natus minima repellat, ipsum,
-                  a itaque eaque iste doloremque?
+                <p>Atuo como desenvolvedor Fullstack com ênfase em desenvolvimento Front-End.
+                  Especialista em criação de Landing Pages, Sites Institucionais e E-commerce.
                 </p>
+                <h2 style={{
+                  marginTop: '50px',
+                  textAlign :'end'
+                }}>
+                  Fortaleza/CE -  <span style={{textTransform: 'capitalize'}}>{currentDate}</span>
+                  </h2>
             </section>
           </div>
          

@@ -18,6 +18,8 @@ type HomeProps = {
 export default function Home({repos} : HomeProps) {
   const reposNumber = repos.length;
 
+  
+
   return (
       <>
         <div className={styles.banner}>

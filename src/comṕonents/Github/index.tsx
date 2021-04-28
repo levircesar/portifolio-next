@@ -1,7 +1,6 @@
 import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR';
 import styles from './styles.module.scss';
-import Link from 'next/link';
 
 interface GithubProps{
   name:string;
@@ -18,6 +17,7 @@ export default function Github({name,url,description} :GithubProps){
   return (
 
     <div className={styles.container}>
+        <h2>Data : {currentDate}</h2>
         <a href={url}><li>{name}</li></a>
         <p>{description}</p>
     </div>
