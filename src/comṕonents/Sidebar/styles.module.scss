@@ -19,9 +19,29 @@
       padding: 1rem;
       cursor: pointer;
       margin-top: 1rem;
+      transition: 0.5s;
+
       span{
-        color: purple;
+        opacity: 0;
+        position: relative;
+        transition: 0.7s;
+        &:nth-last-of-type(1){
+          left: -200px;
+        }
+        &:nth-last-of-type(2){
+          left: 200px;
+        }
       }
+
+      &:hover{
+        span{
+          left: 0px;
+          opacity: 1;
+          color: purple;
+        }
+        transform: scale(1.5);
+      }
+      
     }
     img{
       width: 100%;
@@ -44,7 +64,7 @@
       transition:color  0.2s;
 
       &:hover{
-        color: purple;
+        color: #800080;
       }
     }
   }

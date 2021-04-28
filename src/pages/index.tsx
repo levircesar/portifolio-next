@@ -48,7 +48,7 @@ export default function Home({repos} : HomeProps) {
 }
 
 export const getStaticProps: GetStaticProps = async  () => {
-  const { data } = await api.get('repos')
+  const { data } = await api.get('repos');
 
   const repos = data.map(episode  => {
     return {
