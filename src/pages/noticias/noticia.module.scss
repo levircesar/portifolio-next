@@ -1,0 +1,47 @@
+.wrapper{
+  display: flex;
+  main{
+    flex: 1;
+    overflow-x: auto;
+    height: 100vh;
+    padding: 1rem;
+    margin: 0 2%;
+
+    ul{
+      list-style-type: none;
+    }
+  }
+
+  .gits{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  button{
+    width: 70px;
+    padding: 0.5rem;
+    margin-right: 2px;
+    background-color: #c200c2;
+    border: 0;
+    transition: 0.2s;
+
+    color: white;
+    font-weight: bold;
+
+    &:hover{
+      background-color: #7e047e;
+    }
+  }
+}
+
+@media (max-width: 798px){
+  .wrapper{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px){
+  .header{
+    flex-direction: column-reverse;
+  }
+}

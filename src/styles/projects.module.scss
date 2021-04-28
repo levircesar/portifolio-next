@@ -21,3 +21,15 @@
     flex-direction: column;
   }
 }
+
+@media (max-width: 798px){
+  .wrapper{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px){
+  .header{
+    flex-direction: column-reverse;
+  }
+}

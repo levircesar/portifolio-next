@@ -8,7 +8,6 @@ export default class MyDocument extends Document {
           <link rel="preconnect" href="https://fonts.gstatic.com"/>
           <link href="https://fonts.googleapis.com/css2?family=Inter&family=Lexend:wght@500;600&display=swap" rel="stylesheet"/>
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
-          <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
           <meta name="author" content="Levir César Ribeiro Lemos"/>
           <meta name="description" content="Levir Lemos | Website" />
           <meta name="keywords" content="levir cesar, levir lemos, engenheiro de computação,desenvolvimento web,seo,marketing digital,programação,web design,front-end,web developer,back-end,php" />

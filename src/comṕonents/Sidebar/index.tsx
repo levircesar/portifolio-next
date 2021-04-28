@@ -40,8 +40,8 @@ export default function Sidebar(){
 
       <div>
         <Link href="/"><button>Home</button></Link>
-        <Link href="/panel"><button>Painel</button></Link>
-        <Link href="/404"><button>Error</button></Link>
+        <Link href="/projects"><button>Projects</button></Link>
+        <Link href="/noticias"><button>Noticias</button></Link>
       </div>
       
       

@@ -8,7 +8,7 @@ export const api = axios.create({
 });
 
 export const SecondApi = axios.create({
-  baseURL: 'https://testeserverproffy.herokuapp.com',
+  baseURL: 'https://vercel-api-phi.vercel.app/api/',
   //'http://localhost:3333/',
   //'https://vercel-api-phi.vercel.app/api/',
   //'https://testeserverproffy.herokuapp.com/',

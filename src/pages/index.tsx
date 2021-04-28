@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { api } from '../services/api';
-import { FaForward } from 'react-icons/fa'
+import { FaForward } from 'react-icons/fa';
 
 interface Episode{
   id: number;

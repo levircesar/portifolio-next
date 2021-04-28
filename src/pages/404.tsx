@@ -8,7 +8,7 @@ export default function error(){
   return (
     <div className={styles.wrapper}>
       <Head>
-        <title>Levir Lemos | eWebsite</title>
+        <title>Levir Lemos | Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
       <Sidebar/>
