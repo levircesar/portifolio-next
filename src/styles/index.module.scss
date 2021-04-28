@@ -21,8 +21,8 @@
 
 .content{
   position: relative;
-  z-index: 2;
   height: 100vh;
+  z-index: 2;
 
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +89,7 @@
   .content{
     margin: 0 2%;
     justify-content: center;
+    align-content: center;
     .box{
       h2{
         color: white;
@@ -97,7 +98,7 @@
       }
     }
     img{
-      max-width: 300px;
+      max-width: 200px;
       width: 100%;
     }
   }
