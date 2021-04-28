@@ -85,6 +85,20 @@
   }
 }
 
-@media (max-width: 720px){
-  
+@media (max-width: 520px){
+  .content{
+    margin: 0 2%;
+    justify-content: center;
+    .box{
+      h2{
+        color: white;
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    }
+    img{
+      max-width: 300px;
+      width: 100%;
+    }
+  }
 }
