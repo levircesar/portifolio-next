@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
 import { api } from '../services/api';
+import { FaForward } from 'react-icons/fa'
 
 interface Episode{
   id: number;
@@ -35,7 +36,7 @@ export default function Home({repos} : HomeProps) {
               <p>site em construção</p>
               
               <Link href="/panel">
-                <button>Clique</button>
+                <button><FaForward/></button>
               </Link>
 
 

@@ -9,16 +9,28 @@ export default function Profile(){
         <div className={styles.wrapper}>
         <Sidebar/>
         <main> 
-          <h2>Bem vindo</h2>
-          <p>Me Chamo Levir César, </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, 
-            blanditiis laudantium laborum nemo, voluptatem perferendis odit 
-            excepturi accusantium aspernatur neque sit amet placeat quaerat.
-             Non laudantium quibusdam pariatur quam facilis.</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, 
-            blanditiis laudantium laborum nemo, voluptatem perferendis odit 
-            excepturi accusantium aspernatur neque sit amet placeat quaerat.
-              Non laudantium quibusdam pariatur quam facilis.</p>
+          <div className={styles.header}>
+            <div className={styles.headerText}>
+              <h2>Bem vindo</h2> 
+              <p>Me Chamo Levir César, </p>
+            </div>
+            <img src="/portifolio.svg" alt=""/>
+          </div>
+          
+          <div className={styles.content}>
+            <section>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Optio temporibus eum omnis officia ut inventore necessitatibus 
+                  distinctio error maxime dicta iusto natus minima repellat, ipsum,
+                  a itaque eaque iste doloremque?
+                </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                  Optio temporibus eum omnis officia ut inventore necessitatibus 
+                  distinctio error maxime dicta iusto natus minima repellat, ipsum,
+                  a itaque eaque iste doloremque?
+                </p>
+            </section>
+          </div>
          
         </main>
       </div>

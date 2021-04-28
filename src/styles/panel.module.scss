@@ -17,5 +17,7 @@
 }
 
 @media (max-width: 1010px){
-  
+  .wrapper{
+    flex-direction: column;
+  }
 }

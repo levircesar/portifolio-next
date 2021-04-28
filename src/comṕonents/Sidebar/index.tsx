@@ -39,10 +39,9 @@ export default function Sidebar(){
       </div>
 
         
-      <Link href="/"><button>Voltar</button></Link>
-      <Link href="/panel"><button>painel</button></Link>
-      <Link href="/scroll"><button>Pagina 2</button></Link>
-      <Link href="/teste"><button>teste</button></Link>
+      <Link href="/"><button>Home</button></Link>
+      <Link href="/panel"><button>Painel</button></Link>
+      <Link href="/404"><button>Error</button></Link>
       
     </div>
     

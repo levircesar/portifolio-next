@@ -59,7 +59,7 @@
     padding: 1rem;
     a{
       text-decoration: none;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin: 1rem;
       transition:color  0.2s;
 
@@ -69,4 +69,40 @@
     }
   }
 
+}
+
+@media (max-width: 798px){
+  .container{
+    border-right: 0;
+    height: 100px;
+    width: 100%;
+    max-width: 100%;
+    flex-direction: row;
+    
+    .boxImg{
+      flex-direction: row;
+      flex-wrap: nowrap;
+      h2{
+        padding: 0;
+        cursor: pointer;
+        margin-top: 0rem;
+        transition: 0.5s;
+      }
+      img{
+       display: none;
+      }
+    }
+
+    .boxText{
+      display: none;
+    }
+
+    .socialMedia{
+      padding: 0;
+      a{
+        font-size:1.2rem;
+        margin: 0.1rem;
+      }
+    }
+  }
 }

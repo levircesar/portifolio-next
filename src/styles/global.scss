@@ -5,9 +5,6 @@
   font-family: Lexend, sans-serif;
 }
 
-html{
-  font-size: 75%;
-}
 
 :root {
   --white: #FFF;
@@ -26,21 +23,26 @@ html{
   --purple-800: #6F48C9;
 }
 
+html{
+  font-size: 80%;
+}
+
+
 @media (max-width: 1080px){
   html{
-    font-size: 70%; //15px
+    font-size: 80%; //15px
   }
 }
 
 @media (max-width: 720px){
   html{
-    font-size: 80%; //14px
+    font-size: 70%; //14px
   }
 }
 
 @media (max-width: 600px){
   html{
-    font-size: 80%; //14px
+    font-size: 70%; //14px
   }
 }
 
