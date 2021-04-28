@@ -41,12 +41,12 @@ export default function Profile(){
                 <p>Atuo como desenvolvedor Fullstack com ênfase em desenvolvimento Front-End.
                   Especialista em criação de Landing Pages, Sites Institucionais e E-commerce.
                 </p>
-                <h2 style={{
+                <p style={{
                   marginTop: '50px',
                   textAlign :'end'
                 }}>
                   Fortaleza/CE -  <span style={{textTransform: 'capitalize'}}>{currentDate}</span>
-                  </h2>
+                  </p>
             </section>
           </div>
          
