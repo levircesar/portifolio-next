@@ -1,3 +1,4 @@
+import React from 'react';
 import { format ,parseISO} from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import { GetStaticPaths, GetStaticProps } from 'next';
@@ -6,7 +7,6 @@ import styles from './noticia.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import Sidebar from '../../comṕonents/Sidebar';
 import { FaBackward } from 'react-icons/fa';
 import NewSideBar from '../../comṕonents/NewSideBar';
 

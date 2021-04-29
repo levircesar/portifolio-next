@@ -1,8 +1,8 @@
+import React from 'react';
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { api } from '../services/api';
 import styles from '../styles/noticia.module.scss';
-import Sidebar from '../comṕonents/Sidebar';
 import NewSideBar from '../comṕonents/NewSideBar';
 
 type Episode = {

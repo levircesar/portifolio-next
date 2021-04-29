@@ -1,3 +1,4 @@
+import React from 'react';
 import { GetStaticProps } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -6,7 +7,6 @@ import { SecondApi } from '../services/api';
 import { format, parseISO } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR';
 import styles from '../styles/noticia.module.scss';
-import Sidebar from '../comṕonents/Sidebar';
 import NewSideBar from '../comṕonents/NewSideBar';
 
 type Episode = {

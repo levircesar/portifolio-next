@@ -1,8 +1,6 @@
-
-import Head from 'next/head';
 import React  from 'react';
+import Head from 'next/head';
 import NewSideBar from '../comṕonents/NewSideBar';
-import Sidebar from '../comṕonents/Sidebar';
 import styles from '../styles/error.module.scss';
 
 export default function error(){

@@ -1,6 +1,5 @@
-import Head from 'next/head';
 import React from 'react';
-import Sidebar from '../comṕonents/Sidebar';
+import Head from 'next/head';
 import styles from '../styles/profile.module.scss';
 import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR';
