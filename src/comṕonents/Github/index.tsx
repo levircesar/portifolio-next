@@ -1,26 +1,47 @@
-import format from 'date-fns/format';
-import ptBR from 'date-fns/locale/pt-BR';
-import styles from './styles.module.scss';
+import React, { useState } from 'react';
+import styles from  './Navbar.module.css';
 
-interface GithubProps{
-  name:string;
-  url:string;
-  description:string;
+import { 
+  FaBars ,
+  FaTimes
+} from 'react-icons/fa';
 
-}
+import {SideBarData} from '../../utils/SideBarData';
 
-export default function Github({name,url,description} :GithubProps){
-  const currentDate = format(new Date(), 'EEEEEE , d MMMM' ,{
-    locale: ptBR,
-  });
+
+export default function Github(){
+  const [sidebar , setSidebar] = useState(false);
+
+  const showSidebar = () => setSidebar(!sidebar);
 
   return (
+      <>
+        <div className={styles.navbar}>
+          <a href='#' className={styles.menuBars}>
+            <FaBars onClick={showSidebar}/>
+          </a>
+        </div> 
 
-    <div className={styles.container}>
-        <h2>Data : {currentDate}</h2>
-        <a href={url}><li>{name}</li></a>
-        <p>{description}</p>
-    </div>
+				<nav className={sidebar? `${styles.navMenu} ${styles.active}`:styles.navMenu}>
+					<ul className={styles.navMenuItems} >
+            <li className={styles.navBarToogle}>
+              <a href='#' className={styles.menuBars}>
+               <FaTimes onClick={showSidebar}/>
+              </a>
+            </li>
+            {SideBarData.map((item,index) => {
+              return (
+                <li key={index} className={styles.navText}>
+                  <a href={item.path}>
+                    {item.icon}
+                    <span>{item.title}</span>
+                  </a>
+                </li>
+              )
+            })}
+					</ul>
+				</nav>
+    </>
     
   );
 }

@@ -42,6 +42,7 @@ export default function Sidebar(){
         <Link href="/"><button>Home</button></Link>
         <Link href="/projects"><button>Projects</button></Link>
         <Link href="/noticias"><button>Noticias</button></Link>
+        <Link href="/teste"><button>Teste</button></Link>
       </div>
       
       

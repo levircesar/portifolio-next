@@ -1,23 +1,14 @@
-import Head from 'next/head';
 import React from 'react';
-import Sidebar from '../comṕonents/Sidebar';
-import styles from '../styles/profile.module.scss';
-import format from 'date-fns/format';
-import ptBR from 'date-fns/locale/pt-BR';
+import Github from '../comṕonents/Github';
 import NewSideBar from '../comṕonents/NewSideBar';
+import Sidebar from '../comṕonents/Sidebar';
+import styles from '../styles/teste.module.scss';
 
-export default function Profile(){
-
-  const currentDate = format(new Date(), 'EEEEEE , d MMMM Y' ,{
-    locale: ptBR,
-  });
+export default function Teste() {
 
   return (
+      <>
         <div className={styles.wrapper}>
-        <Head>
-          <title>Levir Lemos | Website</title>
-          <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        </Head>
         <NewSideBar/>
         <main> 
           <div className={styles.header}>
@@ -42,17 +33,13 @@ export default function Profile(){
                 <p>Atuo como desenvolvedor Fullstack com ênfase em desenvolvimento Front-End.
                   Especialista em criação de Landing Pages, Sites Institucionais e E-commerce.
                 </p>
-                <p style={{
-                  marginTop: '50px',
-                  textAlign :'end'
-                }}>
-                  Fortaleza/CE -  <span style={{textTransform: 'capitalize'}}>{currentDate}</span>
-                  </p>
+                
             </section>
           </div>
          
         </main>
       </div>
+      </>
   )
 }
 

@@ -1,6 +1,7 @@
 
 import Head from 'next/head';
 import React  from 'react';
+import NewSideBar from '../comṕonents/NewSideBar';
 import Sidebar from '../comṕonents/Sidebar';
 import styles from '../styles/error.module.scss';
 
@@ -11,7 +12,7 @@ export default function error(){
         <title>Levir Lemos | Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
-      <Sidebar/>
+      <NewSideBar/>
       <main> 
         <div className={styles.content}>
           <img src="/404.svg" alt=""/>

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { api } from '../services/api';
 import styles from '../styles/noticia.module.scss';
 import Sidebar from '../comṕonents/Sidebar';
+import NewSideBar from '../comṕonents/NewSideBar';
 
 type Episode = {
   id: number;
@@ -24,7 +25,7 @@ export default function Home({latestEpisodes , allEpisodes}: HomeProps) {
   
   return (
     <div className={styles.wrapper}>
-      <Sidebar/>
+      <NewSideBar/>
       <main>
         <div className={styles.homepage}>
         <Head>
