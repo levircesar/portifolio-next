@@ -8,6 +8,7 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Sidebar from '../../comṕonents/Sidebar';
 import { FaBackward } from 'react-icons/fa';
+import NewSideBar from '../../comṕonents/NewSideBar';
 
 type Episode = {
   id: string;
@@ -29,7 +30,7 @@ export default function Episode({episode}: EpisodeProps){
 
   return (
     <div className={styles.wrapper}>
-      <Sidebar/>
+      <NewSideBar/>
       <main>
           <div className={styles.episode}>
           <Head>

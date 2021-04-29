@@ -10,6 +10,21 @@
     ul{
       list-style-type: none;
     }
+    button{
+      width: 70px;
+      padding: 0.5rem;
+      margin-right: 2px;
+      background-color: #c200c2;
+      border: 0;
+      transition: 0.2s;
+  
+      color: white;
+      font-weight: bold;
+  
+        &:hover{
+          background-color: #7e047e;
+        }
+    }
   }
 
   .gits{
@@ -17,21 +32,7 @@
     flex-wrap: wrap;
   }
 
-  button{
-    width: 70px;
-    padding: 0.5rem;
-    margin-right: 2px;
-    background-color: #c200c2;
-    border: 0;
-    transition: 0.2s;
-
-    color: white;
-    font-weight: bold;
-
-    &:hover{
-      background-color: #7e047e;
-    }
-  }
+  
 }
 
 @media (max-width: 798px){
