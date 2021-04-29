@@ -91,6 +91,12 @@ export default function NewSideBar(){
                   </li>
                 )
               })}
+              <li className={styles.navText}>
+                <a href="https://www.instagram.com/levirlms/"><FaInstagram/></a>
+                <a href="https://www.facebook.com/levir.lemos/"><FaFacebook/></a>
+                <a href="https://www.youtube.com/channel/UCWE4KnYvGHVtJ2oWfZCSocA"><FaYoutube/></a>
+                <a href="https://wa.me/5585998413146"><FaWhatsapp/></a>
+              </li>
             </ul>
           </nav>
         </div>

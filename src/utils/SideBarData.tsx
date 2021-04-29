@@ -21,10 +21,5 @@ export const SideBarData = [
     title: 'Noticias',
     path: '/noticias',
     icon: <FaFacebook/>
-  },
-  {
-    title: 'Teste',
-    path: '/teste',
-    icon: <FaWhatsapp/>
   }
 ]
