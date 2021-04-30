@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/index.module.scss';
+import styles from '../styles/admin.module.scss';
 import Link from 'next/link';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
@@ -16,35 +16,34 @@ type HomeProps = {
 }
 
 export default function Home({repos} : HomeProps) {
-  const reposNumber = repos.length;
+  const reposNumber = repos.length; 
 
-  
+  function handleLogin(e){
+    e.preventDefault();
+    alert('Login invalido');
+  }
 
   return (
       <>
         <div className={styles.banner}>
           <Head>
-            <title>Levir Lemos | Website</title>
+            <title>Levir Lemos | admin</title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
           </Head>
-          <div className={styles.overlay}></div>
           <div className={styles.content}>
-
-            <img src="/avatar.jpeg" alt="Levir Lemos"/>
-            <div className={styles.box}>
-              <h2>Levir Lemos</h2>
-              <p>Engenheiro de Computação</p>
-              <p>{reposNumber} projetos públicos no Github</p>
-              <p>Entrar</p>
-              
-              <Link href="/profile">
-                <button><FaForward/></button>
-              </Link>
-
-
-            </div>
+            <img src="/authentication.svg" alt="imagem de login"/>
+            <form>
+              <h2>Painel do Admin</h2>
+              <input type="text" name="email" id="email" placeholder="Email..."/>
+              <input type="password" name="password" id="password" placeholder="Senha..."/>
+              <div className={styles.footer}>
+                <input type="submit" value="Enviar" onClick={(e)=>handleLogin(e)}/>
+                <Link href="/">
+                  <p>Voltar pra home</p>
+                </Link>
+              </div>
+            </form>
           </div>
-
         </div>
       </>
   )

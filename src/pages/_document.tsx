@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
           <link rel="shortcut icon" href="/favicon.png" type="image/png" />
           <meta name="author" content="Levir César Ribeiro Lemos"/>
           <meta name="description" content="Levir Lemos | Website" />
-          <meta name="keywords" content="levir cesar, levir lemos, engenheiro de computação,desenvolvimento web,seo,marketing digital,programação,web design,front-end,web developer,back-end,php" />
+          <meta name="keywords" content=",levir cesar ribeiro lemos,levir cesar, levir lemos, engenheiro de computação,desenvolvimento web,seo,marketing digital,programação,web design,front-end,web developer,back-end,php" />
           <meta name="robots" content="index,follow"/>
           <meta name="theme-color" content="#483079"/> 
           <meta name="format-detection" content="telephone=no"/>

@@ -1,9 +1,8 @@
 import React from 'react';
 import { 
   FaInstagram , 
-  FaFacebook , 
-  FaWhatsapp , 
-  FaYoutube 
+  FaFacebook ,
+  FaAddressCard
 } from 'react-icons/fa';
 
 export const SideBarData = [
@@ -21,5 +20,10 @@ export const SideBarData = [
     title: 'Noticias',
     path: '/noticias',
     icon: <FaFacebook/>
+  },
+  {
+    title: 'Admin',
+    path: '/admin',
+    icon: <FaAddressCard/>
   }
 ]
