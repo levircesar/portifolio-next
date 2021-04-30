@@ -4,8 +4,16 @@ import styles from '../styles/profile.module.scss';
 import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR';
 import NewSideBar from '../comṕonents/NewSideBar';
+import Codecard from '../comṕonents/CodeCard';
 
 export default function Profile(){
+
+  const commands = [
+    'yarn dev',
+    'yarn start'
+  ] ;
+
+  
 
   const currentDate = format(new Date(), 'EEEEEE , d MMMM Y' ,{
     locale: ptBR,
@@ -30,24 +38,40 @@ export default function Profile(){
           <div className={styles.content}>
             <section>
               <h2>
-              Seja muito bem vindo(a)! Fiz esse site usando meus conhecimentos em HTML, CSS, Javascript. 
-              Sinta-se avontade para navegar xD 
+                Seja muito bem vindo(a)! Fiz esse site usando meus conhecimentos em HTML, CSS, Javascript. 
+                Sinta-se avontade para navegar xD 
               </h2>
-              <p>Esse pequeno site conta com a tecnologia recente do NextJS e outras funcionalidades do Node JS</p>
+
+              <p>Esse site conta com a tecnologia recente do NextJS e 
+                seu script base foi gerado a partir do comando
+              </p>
+
+              <Codecard text="yarn create next-app" />
+
+              <p>Caso queira copiar este projeto, adicionei um repositório 
+                público para ajudar iniciantes na criação de projetos com next.
+                Caso tenha o github CLI, o projeto pode ser clonado em
+              </p>
+
+              <Codecard text="gh repo clone levircesar/portifolio-next" />
+             
               <p>Graduando em Engenharia de Computação na Universidade 
                 Federal do Ceara (UFC) . A paixão por tecnologia me levou a ingressar em 2017 na faculdade , 
                 onde aprendi muito com pessoas altamente capacitadas.
-                </p>
-                <p>Atuo como desenvolvedor Fullstack com ênfase em desenvolvimento Front-End.
-                  Especialista em criação de Landing Pages, Sites Institucionais e E-commerce.
-                </p>
-                <p style={{
-                  marginTop: '50px',
-                  textAlign :'end'
-                }}>
-                  Fortaleza/CE -  <span style={{textTransform: 'capitalize'}}>{currentDate}</span>
-                  </p>
-            </section>
+              </p>
+
+              <p>Atuo como desenvolvedor Fullstack com ênfase em desenvolvimento Front-End.
+                Especialista em criação de Landing Pages, Sites Institucionais e E-commerce.
+              </p>
+
+              <p style={{
+                marginTop: '50px',
+                textAlign :'end'
+              }}>
+                Fortaleza/CE -  <span style={{textTransform: 'capitalize'}}>{currentDate}</span>
+              </p>
+
+            </section>         
           </div>
          
         </main>
