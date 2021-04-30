@@ -27,13 +27,13 @@ type EpisodeProps = {
 }
 
 export default function Episode({episode}: EpisodeProps){
-
+ 
   return (
     <div className={styles.wrapper}>
       <NewSideBar/>
-      <main>
+      <main> 
           <div className={styles.episode}>
-          <Head>
+          <Head> 
             <title>Levir Lemos | {episode.title} </title>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
           </Head>
@@ -81,6 +81,15 @@ export const getStaticProps : GetStaticProps = async (ctx) =>{
   const { slug } = ctx.params;
 
   const { data } = await SecondApi.get(`/episodes/${slug}`);
+
+  if (!data) {
+    return {
+      redirect: {
+        destination: '/404',
+        permanent: false,
+      },
+    }
+  }
 
   const episode = {
     id: data.id,

@@ -11,11 +11,11 @@ export default function Codecard({text}:CodeProps){
  
   function Copiar(text){
     setCopy(!copy);
-    console.log(copy);
     navigator.clipboard.writeText(`${text}`);
-    setTimeout(() => {
-      setCopy(false);
-    }, 10000);
+  }
+
+  function desCopiar(){
+    setCopy(false)
   }
 
 
@@ -26,10 +26,10 @@ export default function Codecard({text}:CodeProps){
           <p>{text}</p>
           
           {copy
-          ? (<button onClick={()=>Copiar(text)}>
+          ? (<button onMouseLeave={()=>desCopiar()} onMouseDown={()=>Copiar(text)}>
               <FaCheck/> Copiado
             </button> )
-          : (<button onClick={()=>Copiar(text)}>
+          : (<button onMouseLeave={()=>desCopiar()} onMouseDown={()=>Copiar(text)}>
               <FaCopy/> Copiar
             </button> )}
         </code>

@@ -37,7 +37,7 @@
 
     background-color: purple;
     font-size: 12px;
-    max-width: 100px;
+    max-width: 80px;
     width: 100%;
     border-radius: 4px;
     padding: 0.8rem;
@@ -49,10 +49,3 @@
   }
 }
 
-@media (max-width: 480px){
-  .container{
-    code{
-
-    }
-  }
-}
