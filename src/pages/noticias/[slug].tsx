@@ -83,7 +83,7 @@ export const getStaticProps : GetStaticProps = async (ctx) =>{
   const { data } = await SecondApi.get(`/episodes/${slug}`);
 
   if (!data) {
-    return {
+    return { 
       redirect: {
         destination: '/404',
         permanent: false,
