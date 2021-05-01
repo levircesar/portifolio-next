@@ -64,10 +64,19 @@ export default function Profile(){
                 Especialista em criação de Landing Pages, Sites Institucionais e E-commerce.
               </p>
 
+              <h2 style={{margin:'10px',textAlign:'center'}}>Apoie esse projeto com qualquer valor</h2>
+
+              <form style={{textAlign:'center'}} action="https://www.paypal.com/donate" method="post" target="_top">
+                <input type="hidden" name="hosted_button_id" value="ZQR9J5LBZAMLN" />
+                <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+                <img alt="" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+              </form>
+
+
               <p style={{
-                marginTop: '50px',
+                margin: '50px',
                 textAlign :'end'
-              }}>
+              }}> 
                 Fortaleza/CE -  <span style={{textTransform: 'capitalize'}}>{currentDate}</span>
               </p>
 
