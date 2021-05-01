@@ -66,7 +66,7 @@
 
 .navText{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   padding: 8px 0 8px 16px;
   list-style:none;
@@ -96,12 +96,13 @@
 
 .navText a{
   border: 0;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
   color: #f5f5f5;
   background-color: purple;
   font-size: 18px;
-  width: 95%;
+  justify-content: center;
   height: 100%;
   display: flex;
   align-items: center;
@@ -223,6 +224,13 @@
 
 }
 
+.navigationButtons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 @media (max-width: 798px){
   .mobile{
     display: block;

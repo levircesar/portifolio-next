@@ -52,7 +52,7 @@ export default function NewSideBar(){
                 <a href="https://wa.me/5585998413146"><FaWhatsapp/></a>
             </div>
 
-            <div>
+            <div className={styles.navigationButtons}>
               {SideBarData.map((item,index) => {
                 return (
                   <Link key={index} href={item.path}><button>{item.title}</button></Link>
