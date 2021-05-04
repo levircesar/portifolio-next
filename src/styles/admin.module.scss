@@ -59,6 +59,7 @@
 
   input[type=text],
   input[type=password]{
+    padding: 6px;
     &:focus{
       border-color: #800080;
       padding: 6px;
@@ -77,6 +78,7 @@
       max-width: 100px;
       height: 40px;
       display: flex;
+      justify-content: center;
       align-items: center;
       border-radius: 4px;
       transition: 0.2s;
