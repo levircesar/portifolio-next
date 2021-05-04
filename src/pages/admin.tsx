@@ -16,7 +16,7 @@ type HomeProps = {
 }
 
 export default function Home({repos} : HomeProps) {
-  const reposNumber = repos.length; 
+  const reposNumber = repos.length;   
 
   function handleLogin(e){
     e.preventDefault();

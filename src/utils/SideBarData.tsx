@@ -2,7 +2,8 @@ import React from 'react';
 import { 
   FaInstagram , 
   FaFacebook ,
-  FaAddressCard
+  FaAddressCard ,
+  FaStore
 } from 'react-icons/fa';
 
 export const SideBarData = [
@@ -25,6 +26,11 @@ export const SideBarData = [
     title: 'Admin',
     path: '/admin',
     icon: <FaAddressCard/>
+  },
+  {
+    title: 'Store',
+    path: '/store',
+    icon: <FaStore/>
   },
   {
     title: 'Doar',
