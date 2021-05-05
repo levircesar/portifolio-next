@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from '../styles/admin.module.scss';
+import styles from './admin.module.scss';
 import Link from 'next/link';
 import Head from 'next/head';
 import { GetStaticProps } from 'next';
-import { api } from '../services/api';
+import { api } from '../../services/api';
 import { FaForward } from 'react-icons/fa';
 
 interface Episode{
@@ -15,7 +15,7 @@ type HomeProps = {
   repos: Episode[];
 }
 
-export default function Home({repos} : HomeProps) {
+export default function Admin({repos} : HomeProps) {
   const reposNumber = repos.length;   
 
   function handleLogin(e){

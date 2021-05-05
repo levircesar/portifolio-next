@@ -12,10 +12,14 @@ type Produtos = {
   description: string;
   images: string;
   name: string;
+  product?: string;
+  unit_amount?:number;
+  unit_amount_decimal?:number;
 }
 
 type StoreProps = {
   product : Produtos[];
+  price: Produtos[];
 }
 
 export const getStaticProps: GetStaticProps = async () =>{
@@ -24,20 +28,21 @@ export const getStaticProps: GetStaticProps = async () =>{
   });
 
   const product = await stripe.products.list();
-
-  //console.log(product);
+  const price = await stripe.prices.list();
 
   return {
     props:{
       product: product.data, 
+      price: price.data,
     },
     revalidate: 60 * 60 * 8, 
   };
 };
 
-export default function Produtos({ product } :StoreProps) {
+export default function Produtos({ product , price } :StoreProps) {
 
-  //console.log(product);
+  
+ // console.log(price);
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -46,19 +51,23 @@ export default function Produtos({ product } :StoreProps) {
       </Head>
       <NewSideBar/>
       <main> 
-      <div className={styles.content}>
-        {product.map((item,index) =>{
-          return (
-            <ul key={item.id}>
-              <h2>{item.name}</h2>
-              <p>{item.description}</p>
-              {item.images && <img width={250} src={item.images[0]} />}
-              <Link href={`/store/${item.id}`}>
-                <button>Ver produto</button>
-              </Link>
-            </ul>
-          )})}
-      </div>
+        <div className={styles.content}>
+         
+            {product.map((item,index) =>{
+              return (
+                <div className={styles.box}  key={item.id}>
+                  <h2>{item.name}</h2>
+                  {item.images && <img width={250} height={250} src={item.images[0]} />}
+                  <h2>
+                    {'R$ '}
+                    {(price.find(valor => valor.product === item.id).unit_amount / 100).toFixed(2)}
+                  </h2>
+                  <Link href={`/store/${item.id}`}>
+                    <button>Ver produto</button>
+                  </Link>
+                </div>
+              )})}
+        </div>
       </main>
     </div>
     

@@ -57,18 +57,19 @@ export default function Produtos({ product ,priceId  } : Props) {
     <div className={styles.wrapper}>
       <NewSideBar/>
       <main> 
-        <div>
-        <h1>{product.name}</h1>
-        {product.images && <img width={250} src={product.images[0]} />}
-        <h2 style={{fontSize:'50px'}}>
-          {'R$ '}{priceId.unit_amount / 100}{',00'} {priceId.currency}
-        </h2>
+        <div className={styles.content}>
+          <div className={styles.box}>
+            <h2>{product.name}</h2>
+            {product.description? (<h2>{product.description}</h2>) : 'Produto sem descrição'}
+            {product.images && <img width={250} src={product.images[0]} />}
+            <h2 style={{fontSize:'50px'}}>
+              {'R$ '}{(priceId.unit_amount / 100).toFixed(2)}
+            </h2>
 
-        <CheckoutButton  skuId={priceId.id} itemName={product.name} />
-        
+            <CheckoutButton  skuId={priceId.id} itemName={product.name} />
+          </div>
         </div>
       </main>
-
     </div>
     
   )
