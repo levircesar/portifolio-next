@@ -14,10 +14,12 @@ const CheckoutButton: React.FC<Props> = ({ skuId, itemName }) => {
     const stripe = await stripePromise;
 
     const { error } = await stripe.redirectToCheckout({
-      lineItems: [{price: skuId, quantity: 1 }],
+      lineItems: [{price: skuId, quantity: 1  }],
       mode: 'payment',
       successUrl: `https://levirlemos.online/success?itemName=${itemName}`,
       cancelUrl: 'https://levirlemos.online/cancel',
+      billingAddressCollection: 'required',
+      shippingAddressCollection :{ allowedCountries:['BR'] },
     });
 
     if (error) {
