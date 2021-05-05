@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 export default function error(){
   const {
-    query: { itemName},
+    query: { itemName , valor},
   } = useRouter();
 
   return (
@@ -22,6 +22,7 @@ export default function error(){
           <img src="/success.svg" alt=""/>
           <h2 style={{margin:'10px'}}>Compra realizada com sucesso !!! </h2>
           <h2>Item comprado : {itemName} </h2>
+          <h2>Valor pago: {`R$ ${(Number(valor)/100).toFixed(2)}`} </h2>
           <Link href={`/store`}>
                <button>Voltar para a loja</button>
           </Link>

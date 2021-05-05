@@ -1,5 +1,5 @@
 {
-  "name": "levirWebsite",
+  "name": "levirwebsite",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -20,7 +20,7 @@
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
     "sass": "^1.32.11",
-    "stripe": "^8.145.0"
+    "stripe": "^8.146.0"
   },
   "devDependencies": {
     "@types/node": "^14.14.41",

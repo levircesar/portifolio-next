@@ -1,6 +1,7 @@
 .wrapper{
   display: flex;
-  
+  height:100vh;
+  width:100vw;  
   main{
     display: flex;
     flex: 1;
@@ -14,7 +15,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: purple;
+    background-color: rgb(235, 188, 235);
 
     .box{
       margin:1rem;
@@ -23,6 +24,11 @@
       box-shadow: 6px 6px 9px -5px rgba(0,0,0,0.82);
       -webkit-box-shadow: 6px 6px 9px -5px rgba(0,0,0,0.82);
       -moz-box-shadow: 6px 6px 9px -5px rgba(0,0,0,0.82);
+      background-color: rgb(109, 7, 109);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
      
 
       h2{
@@ -36,7 +42,9 @@
       }
 
       img{
-        margin-bottom:10px;
+        width: 100%;
+        max-width:240px;
+        margin:10px;
       }
     }
 
@@ -70,7 +78,6 @@
     flex-direction: column;
 
     .content{
-      margin-top: 5rem;
       flex-direction: column;
     }
   }

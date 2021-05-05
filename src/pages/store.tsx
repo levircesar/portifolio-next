@@ -35,13 +35,12 @@ export const getStaticProps: GetStaticProps = async () =>{
       product: product.data, 
       price: price.data,
     },
-    revalidate: 60 * 60 * 8, 
+    revalidate: 60 , 
   };
 };
 
 export default function Produtos({ product , price } :StoreProps) {
 
-  
  // console.log(price);
   return (
     <div className={styles.wrapper}>

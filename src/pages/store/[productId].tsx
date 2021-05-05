@@ -12,6 +12,7 @@ interface Props{
 }
 
 export const getStaticPaths: GetStaticPaths = async () =>{
+ 
   const stripe = new Stripe(stripeConfig.secretKey, {
     apiVersion: '2020-08-27'
   });
@@ -59,14 +60,18 @@ export default function Produtos({ product ,priceId  } : Props) {
       <main> 
         <div className={styles.content}>
           <div className={styles.box}>
-            <h2>{product.name}</h2>
-            {product.description? (<h2>{product.description}</h2>) : 'Produto sem descrição'}
-            {product.images && <img width={250} src={product.images[0]} />}
-            <h2 style={{fontSize:'50px'}}>
-              {'R$ '}{(priceId.unit_amount / 100).toFixed(2)}
-            </h2>
-
-            <CheckoutButton  skuId={priceId.id} itemName={product.name} />
+            <div>
+              <h2>{product.name}</h2>
+              {product.description? (<h2>{product.description}</h2>) : 'Produto sem descrição'}
+              {product.images && <img width={250} src={product.images[0]} />}
+              <h2 style={{fontSize:'50px'}}>
+                {'R$ '}{(priceId.unit_amount / 100).toFixed(2)}
+              </h2>
+            </div>
+            
+            <div>
+              <CheckoutButton valor={priceId.unit_amount} skuId={priceId.id} itemName={product.name} />
+            </div>
           </div>
         </div>
       </main>
