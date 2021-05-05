@@ -10,18 +10,13 @@
   .content{
     display: flex;
     flex: 1;
-    flex-direction: column;
+    flex-wrap: wrap;
     padding: 0 10%;
     max-width: 100%;
     max-height: 100%;
     justify-content: center;
     align-items: center;
 
-    img{
-      width: 100%;
-      max-width: 40rem;
-      max-height: 100%;
-    }
 
     button{
       border: 0;
@@ -54,6 +49,7 @@
 
     .content{
       margin-top: 5rem;
+      flex-direction: column;
     }
   }
 }

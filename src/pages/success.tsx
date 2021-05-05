@@ -2,8 +2,14 @@ import React  from 'react';
 import Head from 'next/head';
 import NewSideBar from '../comṕonents/NewSideBar';
 import styles from '../styles/error.module.scss';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function error(){
+  const {
+    query: { itemName},
+  } = useRouter();
+
   return (
     <div className={styles.wrapper}>
       <Head>
@@ -13,10 +19,15 @@ export default function error(){
       <NewSideBar/>
       <main> 
         <div className={styles.content}>
-          <img src="/thanks.svg" alt=""/>
-          <h2 style={{margin:'10px'}}>Muito obrigado pela sua doação !!! </h2>
+          <img src="/success.svg" alt=""/>
+          <h2 style={{margin:'10px'}}>Compra realizada com sucesso !!! </h2>
+          <h2>Item comprado : {itemName} </h2>
+          <Link href={`/store`}>
+               <button>Voltar para a loja</button>
+          </Link>
         </div>
       </main>
+
   </div>
   )
 }

@@ -3,7 +3,8 @@ import Stripe from 'stripe';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import stripeConfig from '../../../config/stripe';
 import CheckoutButton from '../../comṕonents/CheckoutButton';
-
+import styles from './product.module.scss';
+import NewSideBar from '../../comṕonents/NewSideBar';
 
 interface Props{
   product: Stripe.Product;
@@ -53,15 +54,22 @@ export const getStaticProps: GetStaticProps = async ({params}) =>{
 
 export default function Produtos({ product ,priceId  } : Props) {
   return (
-    <div>
-      <h1>{product.name}</h1>
-      {product.images && <img width={250} src={product.images[0]} />}
-      <h2>
-        {priceId.unit_amount / 100} {priceId.currency}
-      </h2>
+    <div className={styles.wrapper}>
+      <NewSideBar/>
+      <main> 
+        <div>
+        <h1>{product.name}</h1>
+        {product.images && <img width={250} src={product.images[0]} />}
+        <h2 style={{fontSize:'50px'}}>
+          {'R$ '}{priceId.unit_amount / 100}{',00'} {priceId.currency}
+        </h2>
 
-      <CheckoutButton  skuId={priceId.id} itemName={product.name} />
-      
+        <CheckoutButton  skuId={priceId.id} itemName={product.name} />
+        
+        </div>
+      </main>
+
     </div>
+    
   )
 };

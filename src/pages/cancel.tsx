@@ -2,6 +2,7 @@ import React  from 'react';
 import Head from 'next/head';
 import NewSideBar from '../comṕonents/NewSideBar';
 import styles from '../styles/error.module.scss';
+import Link from 'next/link';
 
 export default function error(){
   return (
@@ -13,10 +14,14 @@ export default function error(){
       <NewSideBar/>
       <main> 
         <div className={styles.content}>
-          <img src="/thanks.svg" alt=""/>
-          <h2 style={{margin:'10px'}}>Muito obrigado pela sua doação !!! </h2>
+          <img src="/cancel.svg" alt=""/>
+          <h2>Ops... Sua Compra foi cancelada ;-; </h2>
+          <Link href={`/store`}>
+               <button>Voltar para a loja</button>
+          </Link>
         </div>
       </main>
+
   </div>
   )
 }

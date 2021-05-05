@@ -1,0 +1,48 @@
+.wrapper{
+  display: flex;
+  main{
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    ul{
+      list-style-type: none;
+    }
+    button{
+      width: 70px;
+      padding: 0.5rem;
+      margin-right: 2px;
+      background-color: #c200c2;
+      border: 0;
+      transition: 0.2s;
+  
+      color: white;
+      font-weight: bold;
+  
+        &:hover{
+          background-color: #7e047e;
+        }
+    }
+  }
+
+  .gits{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  
+}
+
+@media (max-width: 798px){
+  .wrapper{
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 450px){
+  .header{
+    flex-direction: column-reverse;
+  }
+}

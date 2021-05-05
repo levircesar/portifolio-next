@@ -1,6 +1,5 @@
 import React from 'react';
 import { loadStripe } from '@stripe/stripe-js';
-
 import stripeConfig from '../../config/stripe';
 
 const stripePromise = loadStripe(stripeConfig.publicKey);
@@ -17,8 +16,8 @@ const CheckoutButton: React.FC<Props> = ({ skuId, itemName }) => {
     const { error } = await stripe.redirectToCheckout({
       lineItems: [{price: skuId, quantity: 1 }],
       mode: 'payment',
-      successUrl: `http://localhost:3000/success?itemName=${itemName}`,
-      cancelUrl: 'http://localhost:3000/cancel',
+      successUrl: `https://levirlemos.online/success?itemName=${itemName}`,
+      cancelUrl: 'https://levirlemos.online/cancel',
     });
 
     if (error) {
@@ -26,8 +25,8 @@ const CheckoutButton: React.FC<Props> = ({ skuId, itemName }) => {
     }
   }
   return (
-    <button role="link" onClick={handleClick}>
-      Buy
+    <button style={{padding: '20px',width: '200px'}} role="link" onClick={handleClick}>
+      Comprar
     </button>
   );
 };
