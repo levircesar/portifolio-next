@@ -32,7 +32,6 @@ export default function Home({latestEpisodes , allEpisodes}: HomeProps) {
   
   return (
     <div className={styles.wrapper}>
-      <NewSideBar/>
       <main>
         <div className={styles.homepage}>
         <Head>
@@ -104,8 +103,6 @@ export default function Home({latestEpisodes , allEpisodes}: HomeProps) {
                       <td>{episode.members}</td>
                       <td style={{width: 100}} >{episode.publishedAt}</td>
                       <td>{episode.durationAsString}</td>
-                      <td>
-                      </td>
                     </tr>
                   )
                 })}

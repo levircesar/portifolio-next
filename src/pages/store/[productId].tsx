@@ -56,11 +56,10 @@ export const getStaticProps: GetStaticProps = async ({params}) =>{
 export default function Produtos({ product ,priceId  } : Props) {
   return (
     <div className={styles.wrapper}>
-      <NewSideBar/>
       <main> 
         <div className={styles.content}>
           <div className={styles.box}>
-            <div>
+            <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center'}}>
               <h2>{product.name}</h2>
               {product.description? (<h2>{product.description}</h2>) : 'Produto sem descrição'}
               {product.images && <img width={250} src={product.images[0]} />}

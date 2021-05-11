@@ -25,7 +25,6 @@ export default function Home({latestEpisodes , allEpisodes}: HomeProps) {
   
   return (
     <div className={styles.wrapper}>
-      <NewSideBar/>
       <main>
         <div className={styles.homepage}>
         <Head>

@@ -48,7 +48,6 @@ export default function Produtos({ product , price } :StoreProps) {
         <title>Levir Lemos | Website</title>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
       </Head>
-      <NewSideBar/>
       <main> 
         <div className={styles.content}>
          

@@ -3,7 +3,8 @@ import {
   FaInstagram , 
   FaFacebook ,
   FaAddressCard ,
-  FaStore
+  FaStore,
+  FaMailchimp
 } from 'react-icons/fa';
 
 export const SideBarData = [

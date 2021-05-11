@@ -30,7 +30,6 @@ export default function Episode({episode}: EpisodeProps){
  
   return (
     <div className={styles.wrapper}>
-      <NewSideBar/>
       <main> 
           <div className={styles.episode}>
           <Head> 
