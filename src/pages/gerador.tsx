@@ -60,17 +60,21 @@ export default function Profile(){
                 Gerador de Cantadas aleatórias
               </h2>
               
-              <div style={{width: '100%' , height: '200px'}}>
+              <div style={{width: '100%' , height: '120px'}}>
                 {card.frase==='' ? <p>Clique em obter cantada</p> : <p> {card.frase}</p>}
               </div>
               <button style={{width: '150px' , height: '60px', marginRight: '10px'}} onClick={()=>randomItem(Cantadas)}>obter cantada</button>
-              {copy
-              ? (<button  style={{width: '150px' , height: '60px'}} onMouseLeave={()=>desCopiar()} onMouseDown={()=>Copiar(card.frase)}>
-                  <FaCheck/> Copiado
-                </button> )
-              : (<button  style={{width: '150px' , height: '60px'}}onMouseLeave={()=>desCopiar()} onMouseDown={()=>Copiar(card.frase)}>
-                  <FaCopy/> Copiar
-              </button>)}
+              {card.frase!==''&& (
+                  copy
+                    ? (<button  style={{width: '150px' , height: '60px'}} onMouseLeave={()=>desCopiar()} onMouseDown={()=>Copiar(card.frase)}>
+                        <FaCheck/> Copiado
+                      </button> )
+                    : (<button  style={{width: '150px' , height: '60px'}}onMouseLeave={()=>desCopiar()} onMouseDown={()=>Copiar(card.frase)}>
+                        <FaCopy/> Copiar
+                    </button>)
+
+              ) }
+              
             </section>
 
             <section style={{marginBottom:'10px'}}>
@@ -78,17 +82,20 @@ export default function Profile(){
                 Gerador de Assuntos para começar conversa aleatório
               </h2>
               
-              <div style={{width: '100%' , height: '200px'}}>
+              <div style={{width: '100%' , height: '120px'}}>
                 {assunto.frase==='' ? <p>Clique em obter assunto</p> : <p> {assunto.frase}</p>}
               </div>
               <button style={{width: '150px' , height: '60px', marginRight: '10px'}} onClick={()=>randomAssunto(Assuntos)}>obter assunto</button>
-              {copyAssunto
-              ? (<button  style={{width: '150px' , height: '60px'}} onMouseLeave={()=>desCopiarAssunto()} onMouseDown={()=>CopiarAssunto(assunto.frase)}>
-                  <FaCheck/> Copiado
-                </button> )
-              : (<button  style={{width: '150px' , height: '60px'}}onMouseLeave={()=>desCopiarAssunto()} onMouseDown={()=>CopiarAssunto(assunto.frase)}>
-                  <FaCopy/> Copiar
-              </button>)}
+              {assunto.frase!==''&& (
+                copyAssunto
+                  ? (<button  style={{width: '150px' , height: '60px'}} onMouseLeave={()=>desCopiarAssunto()} onMouseDown={()=>CopiarAssunto(assunto.frase)}>
+                      <FaCheck/> Copiado
+                    </button> )
+                  : (<button  style={{width: '150px' , height: '60px'}}onMouseLeave={()=>desCopiarAssunto()} onMouseDown={()=>CopiarAssunto(assunto.frase)}>
+                      <FaCopy/> Copiar
+                  </button>)
+              )}
+              
             </section>     
             <h2 style={{margin:'10px',textAlign:'center'}}>Curtiu o app? Que tal apoiar esse projeto :p</h2>
 

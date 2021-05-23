@@ -53,7 +53,7 @@ export const Cantadas = [
 {area:'',frase:' Você não é colesterol mais afetou meu coração…'},
 {area:'',frase:' Meu amor por você é igual à obra do governo. Nunca acaba…'},
 {area:'',frase:' Me passa seu Twitter? É que a minha mãe falou para eu seguir meu sonho! '},
-{area:'',frase:' Sabe estacionar? Porque tem uma vaga o meu coração'},
+{area:'',frase:' Sabe estacionar? Porque tem uma vaga no meu coração'},
 {area:'',frase:' Pressa é sua inimiga, porque eu ouvi dizer que a pressa é inimiga da perfeição'},
 {area:'',frase:' Me chama de urna eletrônica e me dá seu voto de confiança'},
 {area:'',frase:' Se eu fosse um refrigerante, seria Soda, porque no meu coração soda você'},
