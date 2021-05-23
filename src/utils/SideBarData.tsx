@@ -24,11 +24,6 @@ export const SideBarData = [
     icon: <FaFacebook/>
   },
   {
-    title: 'Admin',
-    path: '/admin',
-    icon: <FaAddressCard/>
-  },
-  {
     title: 'Store',
     path: '/store',
     icon: <FaStore/>
@@ -44,3 +39,10 @@ export const SideBarData = [
     icon: <FaAddressCard/>
   }
 ]
+/*
+{
+    title: 'Admin',
+    path: '/admin',
+    icon: <FaAddressCard/>
+  },
+*/

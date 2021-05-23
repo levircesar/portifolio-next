@@ -1,13 +1,8 @@
 import React , {useState, useEffect} from 'react';
 import Head from 'next/head';
 import styles from '../styles/profile.module.scss';
-import format from 'date-fns/format';
-import ptBR from 'date-fns/locale/pt-BR';
-import Codecard from '../comṕonents/CodeCard';
 import { Cantadas } from '../utils/Cantadas';
 import { Assuntos } from '../utils/Assuntos';
-import { api } from '../services/api';
-import { GetStaticProps } from 'next';
 import { FaCheck, FaCopy } from 'react-icons/fa';
 
 export default function Profile(){
@@ -84,9 +79,9 @@ export default function Profile(){
               </h2>
               
               <div style={{width: '100%' , height: '200px'}}>
-                {assunto.frase==='' ? <p>Clique em obter cantada</p> : <p> {assunto.frase}</p>}
+                {assunto.frase==='' ? <p>Clique em obter assunto</p> : <p> {assunto.frase}</p>}
               </div>
-              <button style={{width: '150px' , height: '60px', marginRight: '10px'}} onClick={()=>randomAssunto(Assuntos)}>obter cantada</button>
+              <button style={{width: '150px' , height: '60px', marginRight: '10px'}} onClick={()=>randomAssunto(Assuntos)}>obter assunto</button>
               {copyAssunto
               ? (<button  style={{width: '150px' , height: '60px'}} onMouseLeave={()=>desCopiarAssunto()} onMouseDown={()=>CopiarAssunto(assunto.frase)}>
                   <FaCheck/> Copiado
@@ -94,8 +89,17 @@ export default function Profile(){
               : (<button  style={{width: '150px' , height: '60px'}}onMouseLeave={()=>desCopiarAssunto()} onMouseDown={()=>CopiarAssunto(assunto.frase)}>
                   <FaCopy/> Copiar
               </button>)}
-            </section>         
+            </section>     
+            <h2 style={{margin:'10px',textAlign:'center'}}>Curtiu o app? Que tal apoiar esse projeto :p</h2>
+
+            <form style={{textAlign:'center'}} action="https://www.paypal.com/donate" method="post" target="_top">
+              <input type="hidden" name="hosted_button_id" value="ZQR9J5LBZAMLN" />
+              <input type="image" src="https://www.paypalobjects.com/pt_BR/BR/i/btn/btn_donateCC_LG.gif" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+              <img alt="" src="https://www.paypal.com/pt_BR/i/scr/pixel.gif" width="1" height="1" />
+            </form>    
           </div>
+
+          
          
         </main>
       </div>
