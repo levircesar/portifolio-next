@@ -5,9 +5,20 @@ import format from 'date-fns/format';
 import ptBR from 'date-fns/locale/pt-BR';
 import NewSideBar from '../comṕonents/NewSideBar';
 import Codecard from '../comṕonents/CodeCard';
+import { GetStaticProps } from 'next';
+import { api } from '../services/api';
 
-export default function Profile(){
+interface Episode{
+  id: number;
+  name: string;
+}
 
+type HomeProps = {
+  repos: Episode[];
+}
+
+export default function Profile({repos} : HomeProps){
+  const reposNumber = repos.length;
   const currentDate = format(new Date(), 'EEEEEE , d MMMM Y' ,{
     locale: ptBR,
   });
@@ -56,6 +67,7 @@ export default function Profile(){
               <p>Atuo como desenvolvedor Fullstack com ênfase em desenvolvimento Front-End.
                 Especialista em criação de Landing Pages, Sites Institucionais e E-commerce.
               </p>
+              <p>Possuo {reposNumber} projetos públicos no Github</p>
 
               <h2 style={{margin:'10px',textAlign:'center'}}>Apoie esse projeto com qualquer valor</h2>
 
@@ -81,3 +93,24 @@ export default function Profile(){
   )
 }
 
+
+export const getStaticProps: GetStaticProps = async  () => {
+  const { data } = await api.get('repos');
+
+  const repos = data.map(episode  => {
+    return {
+      id: episode.id,
+      name: episode.name
+    };
+  })
+
+  //const latestrepos = repos.slice(0, 2);
+  //const allrepos = repos.slice(2, repos.length);
+
+  return  {
+    props: {
+      repos
+    },
+    revalidate: 60 * 60,
+  } 
+}

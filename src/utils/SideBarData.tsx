@@ -37,5 +37,10 @@ export const SideBarData = [
     title: 'Doar',
     path: 'https://www.paypal.com/donate?hosted_button_id=ZQR9J5LBZAMLN',
     icon: <FaAddressCard/>
+  },
+  {
+    title: 'Cantadas',
+    path: '/gerador',
+    icon: <FaAddressCard/>
   }
 ]

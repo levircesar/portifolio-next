@@ -15,3 +15,11 @@ export const SecondApi = axios.create({
   //'https://api.github.com/users/levircesar',
 });
 
+export const apiCantadas = axios.create({
+  baseURL: 'https://levirlemos.online/utils/Cantadas/',
+  //'http://localhost:3333/',
+  //'https://vercel-api-phi.vercel.app/api/',
+  //'https://testeserverproffy.herokuapp.com/',
+  //'https://api.github.com/users/levircesar',
+});
+
