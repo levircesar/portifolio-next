@@ -97,7 +97,7 @@ export default function Profile(){
               )}
               
             </section>     
-            <h2 style={{margin:'10px',textAlign:'center'}}>Curtiu o app? Que tal apoiar esse projeto :p</h2>
+            <h2 style={{margin:'10px',textAlign:'center'}}>Curtiu o app? Que tal apoiar esse projeto com um cafezinho :p</h2>
 
             <form style={{textAlign:'center'}} action="https://www.paypal.com/donate" method="post" target="_top">
               <input type="hidden" name="hosted_button_id" value="ZQR9J5LBZAMLN" />

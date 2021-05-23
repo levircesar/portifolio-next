@@ -8,9 +8,10 @@ interface Props {
   skuId: string;
   itemName: string;
   valor: number;
+  titulo?:string;
 }
 
-const CheckoutButton: React.FC<Props> = ({ skuId, itemName ,valor }) => {
+const CheckoutButton: React.FC<Props> = ({ skuId, itemName ,valor ,titulo}) => {
   function string_to_slug (str) {
     str = str.replace(/^\s+|\s+$/g, ''); // trim
     str = str.toLowerCase();
@@ -46,7 +47,7 @@ const CheckoutButton: React.FC<Props> = ({ skuId, itemName ,valor }) => {
   }
   return (
     <button style={{padding: '20px',width: '200px'}} role="link" onClick={handleClick}>
-      Comprar
+      {titulo ?<p>{titulo}</p>: <p>Comprar</p>}
     </button>
   );
 };
