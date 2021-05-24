@@ -34,8 +34,8 @@ export const SideBarData = [
     icon: <FaAddressCard/>
   },
   {
-    title: 'Cantadas',
-    path: '/gerador',
+    title: 'Site PWA',
+    path: 'https://oque-eu-mando.vercel.app',
     icon: <FaAddressCard/>
   }
 ]
