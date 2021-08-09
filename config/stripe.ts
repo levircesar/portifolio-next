@@ -1,4 +1,13 @@
+//TEST Keys
 export default{
   publicKey: 'pk_test_51ImRdCD5Rble3qNvdW9zWibD8NCvtANl1hM7G64XuA6H4GgSMOMXVsZTEQSaEvGVl2nfvpwpjE7bls4lvfcd23iC00Kg1Zwy5H',
   secretKey: 'sk_test_51ImRdCD5Rble3qNvEO1IIar5VviUPy43Yze3asWDxexuuhOQ7T0N2JGSRccfQipRdGAdtm1ysaxiiPbmT2c6vZGW00oJ7Wu5cN'
 }
+
+//Production keys
+/*
+export default{
+  publicKey: 'pk_live_51ImRdCD5Rble3qNvUrpmqWpvatFujV8K3SxdshUj17s7YKgrAYkWi0aCHptmDaVVLUHFrGpKvI2Lem9BJFxo9O1w00shAwTgmS',
+  secretKey: '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'
+}
+*/
