@@ -59,7 +59,8 @@ export default class MyDocument extends Document {
         <meta property="og:url" content="https://portifolio-next-omega.vercel.app/"/>
         <meta property="og:image" content="https://portifolio-next-omega.vercel.app/favicon.png"/>
         <meta property="og:image:type" content="image/png"/>
-        
+        <script src="https://www.paypal.com/sdk/js?client-id=AbK5cCKs_cYJf8yUJn-e1-2nwQaJhoc0FloYddIn8mnOEyRkVOnO89ZZhxsBFIS4X2zHi3T9McYAEz7t&currency=BRL"></script>
+        <script data-ad-client="ca-pub-2617114983028479" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         </Head>
         <body>
           <Main />

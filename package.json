@@ -7,9 +7,10 @@
     "build": "next build",
     "start": "next start",
     "server": "json-server server.json -w -d 750 -p 3333",
-    "prod" : "next build && next start"
+    "prod": "next build && next start"
   },
   "dependencies": {
+    "@paypal/react-paypal-js": "^7.2.1",
     "@stripe/stripe-js": "^1.14.0",
     "@types/styled-components": "^5.1.9",
     "@vercel/node": "^1.10.0",

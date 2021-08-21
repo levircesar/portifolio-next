@@ -22,7 +22,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "src/pages/api/Subscribe.js"  ],
+, "src/pages/api/Subscribe.js", "src/pages/teste.js", "src/pages/teste.js"  ],
   "exclude": [
     "node_modules"
   ]
